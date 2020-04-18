@@ -4,7 +4,8 @@
   "description": "coding standards installation for js projects",
   "main": "index.js",
   "scripts": {
-    "lint": "node ./node_modules/eslint/bin/eslint . --ignore-path .gitignore"
+    "lint": "node ./node_modules/eslint/bin/eslint . --ignore-path .gitignore",
+    "prepublishOnly": "node ./versionBump.js"
   },
   "repository": {
     "type": "git",
