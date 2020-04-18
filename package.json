@@ -1,6 +1,6 @@
 {
   "name": "init-standards",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "coding standards installation for js projects",
   "main": "index.js",
   "scripts": {
