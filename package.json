@@ -1,0 +1,46 @@
+{
+  "name": "init-standards",
+  "version": "0.0.1",
+  "description": "coding standards installation for js projects",
+  "main": "index.js",
+  "scripts": {
+    "lint": "node ./node_modules/eslint/bin/eslint . --ignore-path .gitignore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grantglidewell/init-standards.git"
+  },
+  "author": "Grant Glidewell <grant@thirdandgrove.com>",
+  "bin": {
+    "init-standards": "./index.js"
+  },
+  "preferGlobal": true,
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grantglidewell/init-standards/issues"
+  },
+  "homepage": "https://github.com/grantglidewell/init-standards#readme",
+  "devDependencies": {
+    "babel-eslint": "~10.0.1",
+    "eslint": "~5.15.1",
+    "eslint-config-airbnb": "~17.1.0",
+    "eslint-config-prettier": "~4.1.0",
+    "eslint-plugin-import": "~2.16.0",
+    "eslint-plugin-jsx-a11y": "~6.2.1",
+    "eslint-plugin-prettier": "~3.0.1",
+    "eslint-plugin-react": "~7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "husky": "~1.3.1",
+    "prettier": "~1.16.4",
+    "pretty-quick": "~1.10.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "npm run lint",
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  }
+}
