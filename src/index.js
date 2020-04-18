@@ -9,6 +9,7 @@ const inquirer = require('inquirer');
 const eslintConfig = require('../.eslintrc.json');
 const initStandardsPackage = require('../package.json');
 const prettierConfig = require('../.prettierrc.json');
+const gitIgnore = require('../.gitignore');
 
 const resolveDeps = require('./resolveDeps');
 const { FgCyan, FgGreen, FgRed, Reset, Reverse } = require('./colors');
@@ -137,6 +138,11 @@ module.exports = async () => {
       FgRed,
       `There was a problem writing the configuration files: ${err}`
     );
+  }
+
+  // check for a .gitignore
+  if (!existsSync(resolve(destDir, '.gitignore'))) {
+    writeFileSync(gitIgnore);
   }
 
   // Add scripts to the target package.
