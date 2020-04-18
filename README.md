@@ -1,4 +1,4 @@
-# TAG JS Standards
+# INIT JS Standards
 
 ## Dependencies
 
@@ -20,12 +20,14 @@
 ensure that your editor has the proper packages/extensions installed and configured.
 
 #### Sublime
+
 ```
 JSPrettier
 Eslint
 ```
 
 #### Atom
+
 ```
 linter
 linter-eslint
@@ -33,6 +35,7 @@ prettier-atom
 ```
 
 #### VSCode
+
 ```
 ESLint
 Prettier - Code formatter
@@ -42,8 +45,8 @@ Prettier - Code formatter
 
 no need to install, just run the binary in the root of your project through `npx` and you're good to go!
 
-`npx tag-standards`
+`npx init-standards`
 
 ## Contributions
 
-this package copies over its own configuration into the target project. So any updates that are concerned with the target configuration only need to update dependencies and appropriate configuration files.
+this package copies over its own configuration into the target project. So any updates that are concerned with the target configuration only need to update dependencies and appropriate configuration files in this repo.
