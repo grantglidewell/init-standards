@@ -3,6 +3,7 @@ const { resolve } = require('path');
 const { readFileSync, writeFileSync, existsSync, unlinkSync } = require('fs');
 const util = require('util');
 const childProcess = require('child_process');
+
 const inquirer = require('inquirer');
 
 const eslintConfig = require('../.eslintrc.json');
