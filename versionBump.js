@@ -1,5 +1,5 @@
-const inquirer = require('inquirer');
 const { exec } = require('child_process');
+const inquirer = require('inquirer');
 
 inquirer
   .prompt([
