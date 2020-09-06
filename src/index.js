@@ -139,12 +139,6 @@ module.exports = async () => {
     );
   }
 
-  // check for a .gitignore
-  const gitIgnore = readFileSync(resolve(__dirname, '../.gitignore'), 'utf8');
-  if (!existsSync(resolve(destDir, '.gitignore'))) {
-    writeFileSync(resolve(destDir, '.gitignore'), gitIgnore);
-  }
-
   // Add scripts to the target package.
   console.log(Reset, FgCyan, 'Modifying package.json');
   try {
